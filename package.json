@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
+  "homepage": "https://headmade.github.io/new.headmade.github.io",
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
