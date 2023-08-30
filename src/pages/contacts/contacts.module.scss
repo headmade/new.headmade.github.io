@@ -1,0 +1,23 @@
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+
+
+    @media (min-width: 992px) {
+        height: calc(100vh - 190px);
+    }
+}
+
+.map {
+    @media(min-width: 320px) {
+        height: 400px;
+        width: 100%
+    }
+
+    @media(min-width: 992px) {
+        height: 100%;
+        width: 100%;
+    }
+}

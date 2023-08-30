@@ -1,0 +1,72 @@
+@import '../../styles//mixins.scss';
+@import '../../styles//queries.scss';
+
+// COLORS
+$lightBlue: #96D2EB;
+$blue: #2D91CD;
+$magenta: #BE288C;
+$yellow: #FAD232;
+$green: #D2DC32;
+
+.component {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+  }
+
+  @media (min-width: $sm) {
+    p {
+      text-align: start;
+    }
+  }
+}
+@mixin angle {
+  height: 20px;
+  width: 100%;
+
+  @media (min-width: $xs) {
+    clip-path: polygon(10% -1%, 10% 51%, 90% -1%);
+  }
+  @media (min-width: $sm) {
+    clip-path: polygon(0% -1%, 0% 51%, 95% -1%);
+    margin-top: 8px;
+    height: 20px;
+  }
+  @media (min-width: $lg) {
+    margin-top: 10px;
+    height: 30px;
+  }
+}
+.angle_default {
+  @include angle;
+
+  background-color: $lightBlue;
+}
+.angle_blue {
+  @include angle;
+
+  background-color: $blue;
+}
+.angle_magenta {
+  @include angle;
+
+  background-color: $magenta;
+}
+.angle_yellow{
+  @include angle;
+
+  background-color: $yellow;
+}
+.angle_green {
+  @include angle;
+
+  background-color: $green;
+}
+.thin {
+  @include header;
+}
+.bold {
+  @include subheader;
+}

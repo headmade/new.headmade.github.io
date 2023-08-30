@@ -1,0 +1,109 @@
+.button {
+  width: 112px;
+  height: 42px;
+  background-color: #e7e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  border-left: 1px solid #f0be32;
+  border-right: 1px solid #888888;
+}
+
+.buttonChange {
+  width: 112px;
+  height: 42px;
+  background-color: #e7e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  border-right: 1px solid #f0be32;
+  border-left: 1px solid #888888;
+}
+
+.buttonActive {
+  width: 112px;
+  height: 42px;
+  background-color: #e7e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  border-left: 1px solid #f0be32;
+  border-right: 1px solid #888888;
+}
+
+.wrap {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-20deg);
+}
+
+.mobileWrapp {
+  padding: 0px;
+  min-width: 71px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fce898;
+  border-radius: 0;
+  margin: 0 0 0 -15px;
+  border: 1px solid #f0be32;
+}
+
+.mobileWrappInactive {
+  padding: 0px;
+  min-width: 71px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e6e6;
+  border-radius: 0;
+  margin: 0 0 0 -15px;
+  border: 1px solid #888888;
+  //   border-right: none;
+}
+
+.desktopWrapp {
+  padding: 0px;
+  min-width: 66px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border: 1px solid #f0be32;
+  background-color: #fce898;
+  border-radius: 0;
+  border-right: 1px solid #f0be32;
+}
+
+.desktopWrappInactive {
+  padding: 0px;
+  min-width: 66px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border: 1px solid #888888;
+  background-color: #e7e6e6;
+  border-radius: 0;
+  border-left: 1px solid #f0be32;
+}
+
+.imageMobile {
+  transform: skew(20deg);
+  margin-left: 13px;
+}
+
+.imageDesktop {
+  transform: skew(20deg);
+  margin-right: 8px;
+}
