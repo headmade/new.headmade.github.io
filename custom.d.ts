@@ -1,6 +1,0 @@
-declare module "*.svg"
-declare module "vanta/dist/vanta.waves.min"
-declare module "react-reveal/Zoom"
-declare module "react-typewriter"
-declare module "three"
-declare module "react-stonecutter"
