@@ -10,11 +10,15 @@ const nextConfig = {
         pathname: '**',
       },
     ],
+    unoptimized: true
   },
 
   env: {
     STRAPI_API: process.env.STRAPI_API,
-  }
+  },
+  distDir: 'build',
+  output: 'export'
+
 }
 
 module.exports = nextConfig
