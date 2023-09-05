@@ -326,7 +326,7 @@ const Id = ({ project  })=>{
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_11___default()), {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
-                        children: project.data.attributes?.name
+                        children: project.attributes?.name
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         name: "description",
@@ -379,7 +379,7 @@ const Id = ({ project  })=>{
                                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                                                 className: (_id_module_scss__WEBPACK_IMPORTED_MODULE_12___default().lowerTriangle),
                                                                 style: {
-                                                                    backgroundColor: `#${project.attributes?.ProjectColor}`
+                                                                    backgroundColor: `#${project.data.attributes?.ProjectColor}`
                                                                 }
                                                             })
                                                         ]
@@ -504,7 +504,7 @@ const Id = ({ project  })=>{
                                                                 remarkPlugins: [
                                                                     remark_gfm__WEBPACK_IMPORTED_MODULE_7__["default"]
                                                                 ],
-                                                                children: project?.data.attributes?.ourwork
+                                                                children: project.data.attributes?.ourwork
                                                             })
                                                         ]
                                                     })
@@ -563,7 +563,7 @@ const Id = ({ project  })=>{
                                                                     remarkPlugins: [
                                                                         remark_gfm__WEBPACK_IMPORTED_MODULE_7__["default"]
                                                                     ],
-                                                                    children: project?.data.attributes?.additional
+                                                                    children: project.data.attributes?.additional
                                                                 })
                                                             ]
                                                         })
