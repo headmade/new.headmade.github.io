@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { cache, useLayoutEffect } from "react";
 import { Col, Row } from "antd";
 import style from './projects.module.scss'
 import Areas from "@/components/Projects/Areas";
@@ -20,25 +20,26 @@ import mobile from '../../assets/areas/mobile.svg'
 import design from '../../assets/areas/image.svg'
 import Head from "next/head";
 
-const Projects = () => {
-  const [elemet, setProjects] = useState<any>([]);
-  console.log(`${process.env.STRAPI_API}/projects`)
-  const url = process.env.STRAPI_API
+
+const Projects = ({project}) => {
+  // const [elemet, setProjects] = useState<any>([]);
+  // const url = process.env.STRAPI_API
   const imgUrl = "http://localhost:1337"
   const [loading, setLoading] = useState(false);
-  const heightRef = useRef(null);
-  const getProjects = () => {
-    setLoading(true)
-    axios.get(`${url}/projects/?populate=*`).then((response) => {
-      setLoading(false);
-      const elements = response.data.data
-      setProjects(elements);
+  // const heightRef = useRef(null);
+  // const getProjects = () => {
+  //   setLoading(true)
+  //   axios.get(`${url}/projects/?populate=*`).then((response) => {
+  //     setLoading(false);
+  //     const elements = response.data.data
+  //     setProjects(elements);
       
-    }).finally(() => setLoading(false))
-  };
-  useEffect(() => getProjects(), []);
+      
+  //   }).finally(() => setLoading(false))
+  // };
+  // useEffect(() => getProjects(), []);
 
-  console.log(elemet)
+  console.log(project)
 // debugger
   return (
     
@@ -84,14 +85,14 @@ const Projects = () => {
               <h1 className={style.headerProjects}>Проекты</h1>
             </Fade>
 
-            <Row justify={"center"} ref={heightRef} >
+            <Row justify={"center"}>
               <Col xs={22} lg={16}>
                 <ResponsiveMasonry
                   columnsCountBreakPoints={{ 320: 1, 768: 2, 992: 3 }}
 
                 >
                   <Masonry gutter={20}>
-                    {elemet.map((elem: any, i: number) => (
+                    {project.map((elem: any, i: number) => (
                       <Fade key={elem.id} bottom>
                         <div key={elem.id}>
                           <Card top={true} bottom={true} center={false}>
@@ -99,7 +100,7 @@ const Projects = () => {
                               <Image
                                 className={style.logo}
                                 unoptimized={true}
-                                src={`${imgUrl}` + elem.attributes.logo.data.attributes.formats.small.url}
+                                src={`${elem.attributes.logo}`}
                                 alt={`${elem.header}`}
                                 width={100}
                                 height={100}
@@ -131,3 +132,15 @@ const Projects = () => {
 }
 
 export default Projects;
+
+
+export async function getStaticProps() {
+  const results = await axios.get(`http://127.0.0.1:1337/api/projects/?populate=*`)
+  const res = results.data.data;
+  console.log(res);
+  return {
+    props: {
+      project: res,
+    }
+  }
+}

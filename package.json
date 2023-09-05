@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "next build && next export",
-    "deploy": "touch ./build/.nojekyll && touch ./build/CNAME && echo new.headmade.pro >> ./build/CNAME && gh-pages -d build -t true"
+    "deploy": "touch ./build/.nojekyll && touch ./build/CNAME && echo new.headmade.pro >> ./build/CNAME && gh-pages -d build -t true",
+    "serve": "serve ./out"
   },
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.4",
@@ -38,6 +39,7 @@
     "remark-gfm": "^3.0.1",
     "reshake": "^2.0.0",
     "sass": "^1.62.1",
+    "serve": "^14.2.1",
     "styled-components": "^6.0.4",
     "three": "^0.153.0",
     "typescript": "5.0.4",

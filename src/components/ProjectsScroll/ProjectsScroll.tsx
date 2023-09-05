@@ -14,13 +14,13 @@ import axios from "axios";
 
 interface Props {
   header: string;
+  projects: any
 }
 
 const ProjectsScroll = (props: Props) => {
   const [elemet, setProjects] = useState<any>([]);
   console.log(`${process.env.STRAPI_API}/projects`)
   const url = process.env.STRAPI_API
-  const imgUrl = "http://localhost:1337"
   const [loading, setLoading] = useState(false);
   const heightRef = useRef(null);
   const getProjects = () => {
@@ -50,14 +50,14 @@ const ProjectsScroll = (props: Props) => {
                 <p>{props.header}</p>
               </div>
               <div className={styles.scroll}>
-              {elemet.map((elem: any, i: number) => (
+              {props.projects.map((elem: any, i: number) => (
                         <div className={styles.elements} key={elem.id}>
                           <Card top={true} bottom={true} center={false}>
                             <div className={styles.image_wrapper}>
                               <Image
                                 className={styles.logo}
                                 unoptimized={true}
-                                src={`${imgUrl}` + elem.attributes.logo.data.attributes.formats.small.url}
+                                src={elem.attributes.logo}
                                 alt={`${elem.header}`}
                                 width={100}
                                 height={100}

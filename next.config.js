@@ -17,7 +17,7 @@ const nextConfig = {
     STRAPI_API: process.env.STRAPI_API,
   },
   distDir: 'build',
-  output: 'export'
+  // output: 'export'
 
 }
 

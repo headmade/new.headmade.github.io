@@ -10,10 +10,11 @@ import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import { SpringGrid, measureItems } from 'react-stonecutter';
 import Fade from 'react-reveal/Fade';
+import axios from "axios";
 
 // TODO Head
 
-export default function Home() {
+export default function Home({project}) {
 
   return (
     <ConfigProvider>
@@ -29,8 +30,20 @@ export default function Home() {
         </Fade>
         
         <Main />
-        <ProjectsScroll header={'Проекты'} />
+        <ProjectsScroll projects={project} header={'Проекты'} />
       </main>
     </ConfigProvider>
   );
 }
+
+
+  export async function getStaticProps() {
+    const results = await axios.get(`http://127.0.0.1:1337/api/projects/?populate=*`)
+    const res = results.data.data;
+    return {
+      props: {
+        project: res
+      }
+    }
+  }
+  
