@@ -33,6 +33,7 @@ $long-angle: 70vw;
 .angle {
   display: flex;
   flex-direction: row;
+  width: -webkit-fill-available;
 }
 .angle_bottom_first {
   @include angle;

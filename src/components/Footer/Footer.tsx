@@ -20,13 +20,13 @@ const Footer = () => {
                     </div>
                   </Link>
                   <div className={styles.subheaders}>
-                    <Link href={"#"} className={styles.link}>
+                    <Link href={"/projects"} className={styles.link}>
                       <p>Проекты</p>
                     </Link>
-                    <Link href={"#"} className={styles.link}>
+                    <Link href={"/about"} className={styles.link}>
                       <p>О нас</p>
                     </Link>
-                    <Link href={"#"} className={styles.link}>
+                    <Link href={"/contacts"} className={styles.link}>
                       <p>Контакты</p>
                     </Link>
                   </div>

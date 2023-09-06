@@ -44,7 +44,7 @@ const Main = () => {
           <div className={styles.angle_top_first} />
           <div className={styles.angle_top_second} />
         </div>
-        <Col lg={{ push: 1 }} flex={"1600px"}>
+        <Col lg={20}>
           <Row justify={"center"}>
             <Col xs={22} sm={18} xl={15}>
                 <div className={styles.component}>

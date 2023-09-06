@@ -19,7 +19,6 @@ interface Props {
 
 const ProjectsScroll = (props: Props) => {
   const [elemet, setProjects] = useState<any>([]);
-  console.log(`${process.env.STRAPI_API}/projects`)
   const url = process.env.STRAPI_API
   const [loading, setLoading] = useState(false);
   const heightRef = useRef(null);
@@ -51,7 +50,7 @@ const ProjectsScroll = (props: Props) => {
               </div>
               <div className={styles.scroll}>
               {props.projects.map((elem: any, i: number) => (
-                        <div className={styles.elements} key={elem.id}>
+                        <div  className={styles.elements} key={elem.id}>
                           <Card top={true} bottom={true} center={false}>
                             <div className={styles.image_wrapper}>
                               <Image

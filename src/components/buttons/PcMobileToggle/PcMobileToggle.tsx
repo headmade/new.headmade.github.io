@@ -20,8 +20,6 @@ const PcMobileToggle = (props: Props) => {
   const [styleComponent, setStyleComponent] = useState(style.buttonChange);
 
   const handleDesktop = () => {
-    console.log("desktopActive");
-    console.log("mobile not active");
     setStyleDesktop(style.desktopWrapp);
     setStyleMobile(style.mobileWrappInactive);
     setStyleComponent(style.buttonChange)
@@ -29,8 +27,6 @@ const PcMobileToggle = (props: Props) => {
   };
 
   const handleMobile = () => {
-    console.log("mobileActive");
-    console.log("desktop not active");
     setStyleMobile(style.mobileWrapp);
     setStyleDesktop(style.desktopWrappInactive)
     setStyleComponent(style.buttonActive)

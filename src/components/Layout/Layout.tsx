@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { ReactNode } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
+import { ClockLoader } from "react-spinners";
 
 interface LayoutProps {
   children?: ReactNode;
