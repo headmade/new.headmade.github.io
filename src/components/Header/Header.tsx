@@ -40,11 +40,11 @@ const Header = () => {
     <>
       <div className={styles.component_wrapper}>
         <Row justify={"center"}>
-          <Col flex={"1210px"}>
+          <Col span={24}>
             <div
               style={{
                 zIndex: "3",
-                backgroundColor: "white",
+                background: "#fff",
                 position: "absolute",
                 height: "100px",
                 width: "100%",
@@ -52,7 +52,7 @@ const Header = () => {
             />
 
             <Row justify={"center"}>
-              <Col flex={"1210px"} xs={22}>
+              <Col flex={"1210px"} style={{background: '#fff'}} xs={24}>
                 <div className={styles.header} style={{ zIndex: "99" }}>
                   <Link href={"/"}>
                     <div className={styles.image_wrapper}>
