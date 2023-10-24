@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, ConfigProvider } from "antd";
+import styles from './ArrowButton.module.scss'
 
 interface Props {
   color: string;
@@ -36,6 +37,7 @@ const ArrowButton = ({
         }}
         block={true}
         href="/projects"
+        className={styles.button}
       >
         <p>{text}</p>
       </Button>

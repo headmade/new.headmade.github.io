@@ -45,7 +45,7 @@ const Id = ({project}) => {
                                             <p className={style.projectNameText}>{project.data.attributes?.name}</p>
                                             <div className={style.lowerTriangle} style={{ backgroundColor: `#${project.data.attributes?.ProjectColor}` }}></div>
                                         </div>
-                                        <Link href={`${project.data.attributes.link}`} className={style.link}>{project.data.attributes.link}</Link>
+                                        <Link href={`${project.data.attributes.link}`} className={style.link} target="_blank">{project.data.attributes.link}</Link>
                                     </div>
                                     <Fade right>
                                         <ReactMarkdown className={style.projectDescription}>
@@ -144,6 +144,7 @@ export default Id;
 export async function getStaticPaths() {
     const fetch = await axios.get(`http://127.0.0.1:1337/api/projects`)
     const result = fetch.data;
+    console.log("fflggl",result)
     return {
       paths: result.data.map(res => ({
         params: { id: res.id.toString() },
