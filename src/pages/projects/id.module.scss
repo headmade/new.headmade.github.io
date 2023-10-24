@@ -113,10 +113,18 @@
 .phoneImg,
 .pcImg {
     margin: 0 auto;
-    display: block;
+    display: flex;
     max-height: 600px;
     object-fit: contain;
     height: 100%;
+    align-items: center;
+}
+
+.pcImg {
+    margin-top: 40%;
+    @media(min-width: 768px) {
+        margin-top: 0%;
+    }
 }
 
 .triangleTransition {
