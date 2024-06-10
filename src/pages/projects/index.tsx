@@ -65,7 +65,7 @@ const Projects = ({project}) => {
                 <Areas name="Мобильная разработка" tech={"iOS / Android / React Native / Windows / Ionic"} lineColor={'#FAD232'} pic={mobile} />
               </Fade>
               <Fade delay={400} left>
-                <Areas name="Frontend" tech={"React / HTML / CSS3 / ES6 / Saas / Angular / CoffeeScript / Backbone"} lineColor={'#2D91CD'} pic={front} />
+                <Areas name="Frontend" tech={"React.js / Next.js / CSS3 / styled-components / Ant Design / Ant Design Pro / Less / Sass / Apollo / GraphQL / "} lineColor={'#2D91CD'} pic={front} />
               </Fade>
               <Fade delay={600} left>
                 <Areas name="Backend" tech={"Ruby / Elixir / Node.js / GO / Erlang / C / C++ / MySql / Postgres / MemCache / Redis/ Nats"} lineColor={'#D2DC32'} pic={back} />

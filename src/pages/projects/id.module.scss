@@ -11,7 +11,7 @@
 
     @media (min-width: 768px) {
         margin-right: 24px;
-        
+
     }
 
     @media(min-width: 992px) {
@@ -25,9 +25,7 @@
     }
 }
 
-.paragraph {
-
-}
+.paragraph {}
 
 .projectInfo {
     margin-top: 64px;
@@ -58,6 +56,7 @@
 
 .projectNameText {
     font-family: Futuris;
+    word-break: break-all;
     font-size: 32px;
     text-align: center;
 
@@ -71,13 +70,14 @@
 }
 
 .projectName {
-    width: max-content;
+
     display: block;
     margin: 0 auto;
     font-weight: bold;
-
+    width: 100%;
     @media (min-width: 768px) {
         margin: 0;
+        width: max-content;
     }
 
 }
@@ -122,6 +122,7 @@
 
 .pcImg {
     margin-top: 40%;
+
     @media(min-width: 768px) {
         margin-top: 0%;
     }

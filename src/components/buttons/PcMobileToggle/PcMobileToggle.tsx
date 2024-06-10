@@ -4,6 +4,7 @@ import Image from "next/image";
 import mobile from "../../../assets/toggle/Tablet.svg";
 import pc from "../../../assets/toggle/Desktop.svg";
 import { Button, ConfigProvider } from "antd";
+import { usePathname } from 'next/navigation'
 
 
 interface Props {
@@ -15,6 +16,9 @@ const PcMobileToggle = (props: Props) => {
 //   const [isDesktopActive, setIsDesktopActive] = useState(true);
 //   const [isMobileActive, setIsMobileActive] = useState(false);
 
+const pathname = usePathname()
+
+  console.log(pathname)
   const [styleDesktop, setStyleDesktop] = useState(style.desktopWrapp);
   const [styleMobile, setStyleMobile] = useState(style.mobileWrappInactive);
   const [styleComponent, setStyleComponent] = useState(style.buttonChange);
@@ -42,7 +46,7 @@ const PcMobileToggle = (props: Props) => {
         },
       }}
     >
-      <div className={styleComponent}>
+      <div style={pathname === '/projects/9' ? {display: 'none'} : {}} className={styleComponent}>
         <div className={style.wrap}>
           <Button
             onClick={handleMobile}
